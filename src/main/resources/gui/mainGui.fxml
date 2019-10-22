@@ -17,10 +17,11 @@
          </content>
       </ScrollPane>
       <CheckBox fx:id="selectAllCheck" layoutX="14.0" layoutY="33.0" mnemonicParsing="false" onAction="#selectAll" prefHeight="21.0" prefWidth="337.0" text="SELECT ALL" />
-      <HTMLEditor htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="360.0" layoutY="319.0" prefHeight="468.0" prefWidth="822.0" />
+      <HTMLEditor fx:id="content" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="360.0" layoutY="366.0" prefHeight="421.0" prefWidth="822.0" />
       <Button layoutX="834.0" layoutY="84.0" mnemonicParsing="false" onMouseClicked="#sendEmail" prefHeight="96.0" prefWidth="348.0" text="SEND" />
       <Button layoutX="360.0" layoutY="180.0" mnemonicParsing="false" onMouseClicked="#connectDatabase" prefHeight="96.0" prefWidth="348.0" text="CONNECT DATABASE" />
       <TextField fx:id="loginField" layoutX="360.0" layoutY="84.0" prefHeight="31.0" prefWidth="348.0" promptText="LOGIN" />
       <PasswordField fx:id="passwordField" layoutX="360.0" layoutY="132.0" prefHeight="31.0" prefWidth="348.0" promptText="PASSWORD" />
+      <TextField fx:id="titleField" layoutX="360.0" layoutY="325.0" prefHeight="31.0" prefWidth="822.0" promptText="Title" />
    </children>
 </AnchorPane>

@@ -1,11 +1,14 @@
 package controllers;
 
 import deafult.DatabaseManager;
+import deafult.MailManager;
 import deafult.Main;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.web.HTMLEditor;
+
 import java.util.ArrayList;
 
 
@@ -20,7 +23,10 @@ public class mainController {
     private TextField loginField;
     @FXML
     private PasswordField passwordField;
-
+    @FXML
+    private TextField titleField;
+    @FXML
+    private HTMLEditor content;
     public static ArrayList<CheckBox> listCheckBox;
 
     public void addNewUser(ArrayList list){
@@ -62,6 +68,7 @@ public class mainController {
                 for(int i=0;i<listCheckBox.size();i++){
                     if(listCheckBox.get(i).isSelected()){
                         System.out.println(listCheckBox.get(i).getText());
+                        MailManager.sendMail(titleField.getText(),content.getHtmlText(),listCheckBox.get(i).getText());
                     }
                 }
             }
