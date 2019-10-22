@@ -8,12 +8,14 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+
 public class Main extends Application {
 
     static final String JDBC_DRIVER = "org.postgresql.Driver";
-    static final String DB_URL = "jdbc:postgresql://195.150.230.210:5434///";
-    static final String USER = "///";
-    static final String PASS = "//";
+    static final String DB_URL = "jdbc:postgresql://195.150.230.210:5434/2019_kowalski_artur";
+    public static String user = "";
+    public static String pass = "";
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -24,16 +26,11 @@ public class Main extends Application {
         primaryStage.setTitle("Mail Sender");
         primaryStage.getIcons().add(new Image("/icon/mailicon.png"));
         primaryStage.show();
-
+        mainController.listCheckBox = new ArrayList<>();
         mainController mainController = (mainController) loader.getController();
-        getUsers(mainController);
 
     }
 
     public static void main(String[] args) { launch(args); }
 
-    private static void getUsers(mainController mainController){
-        DatabaseManager databaseManager = new DatabaseManager();
-        mainController.addNewUser(databaseManager.getUsers());
-    }
 }
