@@ -31,6 +31,7 @@ public class DatabaseManager {
         return list;
     }
 
+
     public static boolean checkConnectionDatabase(String loginName,String passwordName){
         Connection connection = null;
         try{
