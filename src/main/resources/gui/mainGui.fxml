@@ -2,13 +2,22 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.mainController">
-   <children>
-      <TableView fx:id="tab" layoutX="14.0" layoutY="110.0" prefHeight="676.0" prefWidth="1172.0" />
-      <ChoiceBox fx:id="choiseBox" layoutX="600.0" layoutY="55.0" prefHeight="25.0" prefWidth="225.0" />
-      <Button layoutX="932.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#selectTableButton" prefHeight="65.0" prefWidth="203.0" text="SELECT" />
-   </children>
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.mainController">
+   <TableView fx:id="tab" layoutX="14.0" layoutY="110.0" prefHeight="676.0" prefWidth="1172.0"/>
+   <ChoiceBox fx:id="choiceBox" layoutX="530.0" layoutY="32.0" prefHeight="31.0" prefWidth="172.0"/>
+   <Button layoutX="716.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#selectTable" prefHeight="65.0"
+           prefWidth="203.0" text="SELECT"/>
+   <TextField fx:id="loginField" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="260.0" promptText="Login"/>
+   <Button layoutX="290.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#loginDatabase" prefHeight="54.0"
+           prefWidth="222.0" text="LOGIN DATABASE"/>
+   <Button layoutX="960.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#sendEmailGui" prefHeight="65.0"
+           prefWidth="203.0" text="SEND EMAIL"/>
+   <PasswordField fx:id="passwordField" layoutX="14.0" layoutY="60.0" prefHeight="31.0" prefWidth="260.0"
+                  promptText="Password"/>
 </AnchorPane>
